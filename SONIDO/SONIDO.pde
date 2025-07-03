@@ -6,6 +6,8 @@ import processing.sound.FFT;
 SoundFile soundfile;
 FFT fft;
 
+int timeLapse;
+
 int bands = 256;
 
 float [] spectrum = new float [bands];
@@ -35,6 +37,7 @@ void setup () {
 }
 
 void draw () {
+  
   fft.analyze(spectrum);
   
   float level = spectrum [10]; 
